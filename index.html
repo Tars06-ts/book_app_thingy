@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Reading Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- ── sidebar ── -->
+    <aside id="sidebar">
+      <div id="sidebar-top">
+        <div id="logo">
+          <span id="logo-icon">📖</span>
+          <span id="logo-text">Reading Room</span>
+        </div>
+        <nav id="sidebar-nav">
+          <button class="nav-btn active" data-view="dashboard">
+            <span class="nav-icon">⌂</span>
+            <span class="nav-label">Dashboard</span>
+          </button>
+          <button class="nav-btn" data-view="toread">
+            <span class="nav-icon">◈</span>
+            <span class="nav-label">To Read</span>
+            <span class="nav-count" id="count-toread">0</span>
+          </button>
+          <button class="nav-btn" data-view="reading">
+            <span class="nav-icon">◉</span>
+            <span class="nav-label">Reading</span>
+            <span class="nav-count" id="count-reading">0</span>
+          </button>
+          <button class="nav-btn" data-view="read">
+            <span class="nav-icon">✓</span>
+            <span class="nav-label">Read</span>
+            <span class="nav-count" id="count-read">0</span>
+          </button>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- ── main content ── -->
+    <main id="main">
+
+      <!-- dashboard view -->
+      <!-- dashboard view -->
+      <div id="view-dashboard" class="view active">
+
+        <!-- floating widgets -->
+        <!-- lamp widget -->
+        <div id="widget-lamp" class="floating-widget">
+          <img src="assets/lamp.svg" alt="lamp" id="lamp-img" />
+          <div id="lamp-glow"></div>
+        </div>
+        <div id="hero">
+          <div id="hero-text">
+            <h1 id="hero-title">The Reading Room</h1>
+            <p id="hero-sub">your personal library</p>
+          </div>
+        </div>
+<div id="dashboard-grid">
+          <section class="dash-section shade-1" id="section-current">
+            <h2 class="section-title">Currently Reading</h2>
+            <div id="current-books"></div>
+          </section>
+
+          <div class="dash-photo">
+            <img src="assets/pic.jpg" alt="" />
+          </div>
+
+          <section class="dash-section shade-2" id="section-goal">
+            <h2 class="section-title">Monthly Goal</h2>
+            <div id="goal-widget"></div>
+          </section>
+
+          <section class="dash-section shade-3" id="section-stats">
+            <h2 class="section-title">Stats</h2>
+            <div id="stats-grid"></div>
+          </section>
+
+          <div class="dash-quote">
+            <p id="quote-text">"A reader lives a thousand lives before he dies." <span>— George R.R. Martin</span></p>
+          </div>
+
+         <div class="dash-photo-small">
+            <img src="assets/pic2.jpg" alt="" />
+          </div>
+
+          <section class="dash-section shade-1" id="section-recent">
+            <h2 class="section-title">Recently Read</h2>
+            <div id="recent-books"></div>
+          </section>
+        </div>
+      </div>
+
+      <!-- to read view -->
+      <div id="view-toread" class="view">
+        <div class="view-header">
+          <h2 class="view-title">To Read</h2>
+          <button class="add-btn" id="add-toread">+ add book</button>
+        </div>
+        <div class="book-list" id="list-toread"></div>
+      </div>
+
+      <!-- reading view -->
+      <div id="view-reading" class="view">
+        <div class="view-header">
+          <h2 class="view-title">Currently Reading</h2>
+          <button class="add-btn" id="add-reading">+ add book</button>
+        </div>
+        <div class="book-list" id="list-reading"></div>
+      </div>
+
+      <!-- read view -->
+      <div id="view-read" class="view">
+        <div class="view-header">
+          <h2 class="view-title">Read</h2>
+          <button class="add-btn" id="add-read">+ add book</button>
+        </div>
+        <div class="book-list" id="list-read"></div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- modal -->
+  <div id="modal-overlay" class="hidden">
+    <div id="modal-box">
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
